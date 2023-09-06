@@ -171,7 +171,7 @@ return (
   type="text" 
   value={searchQuery}
   onChange={(e) => setSearchQuery(e.target.value)}
-  placeholder="Search whispers, echos and ghosts..."
+  placeholder="Search whispers, echoes and ghosts..."
   className="search-input"
 />
 

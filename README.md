@@ -58,6 +58,7 @@ Create a .env file at the root of the project and add your API Gateway Invoke UR
 ```
 VITE_APP_WEBSOCKET_URL=API_GATEWAY_INVOKE_URL
 ```
+
 **Amplify Environment variables**
 
 1. Access the Amplify environment variable management interface.
@@ -73,4 +74,4 @@ VITE_APP_WEBSOCKET_URL=API_GATEWAY_INVOKE_URL
 ## Future Work
 
 - Slack integration for notification.
-  - Telegram is working with echos quoting whisper.
+  - Telegram is working with echoes quoting whispers.

@@ -4,6 +4,13 @@
 
 [GhostChat](https://main..amplifyapp.com/) is a live discussion board that introduces a _supernatural_ concept with whispers (threads), echoes (replies), and ghosts (authors).
 
+## Potential use cases
+
+- Anonymous Corporate Feedback
+- Whistleblower Platform
+- Confessions or Secrets Sharing
+- Anonymous Support Group
+  
 ## Technologies
 
 - AWS Lambda: View the codes [here](https://github.com/owxiang/ghostchat/tree/main/lambdas).

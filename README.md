@@ -2,12 +2,11 @@
 
 ## Overview
 
-[GhostChat](https://main..amplifyapp.com/) is a live forum-like application with whispers(threads), echos(replies) and ghosts(authors).
+[GhostChat](https://main..amplifyapp.com/) is a live discussion board that introduces a supernatural concept with whispers (threads), echoes (replies), and ghosts (authors).
 
 ## Technologies
 
-- AWS Lambda
-  - See codes [here](https://github.com/owxiang/ghostchat/tree/main/lambdas).
+- AWS Lambda: View the codes [here](https://github.com/owxiang/ghostchat/tree/main/lambdas).
 - AWS DynamoDB
 - AWS API Gateway with WebSocket
 - AWS Systems Manager
@@ -19,38 +18,54 @@
 
 ## Getting Started
 
+To get GhostChat up and running locally, follow these steps:
+
+1. Clone the repository:
+
 ```
 git clone https://github.com/owxiang/ghostchat.git
 cd ghostchat
+```
+
+2. Install project dependencies:
+
+```
 npm install
+```
+
+3. Start the development server:
+
+```
 npm run dev
 ```
 
 ## Usage
 
-Enter your ghostly name and start a new whisper or echo to existing ones.
+Open GhostChat in your browser.
 
-Use the search bar to find old whisper, echos or ghosts.
+Enter your ghostly name and start a new whisper or reply to existing ones.
+
+Utilize the search bar to find previous whispers, echoes, or ghosts.
 
 ## Configurations for backend
 
 **Local Environment variables**
 
-Create a `.env` file at the root of project.
+Create a .env file at the root of the project and add your API Gateway Invoke URL:
 
-Add API Gateway Invoke URL to this file:
-
-`VITE_APP_WEBSOCKET_URL = API_GATEWAY_INVOKE_URL`
+VITE_APP_WEBSOCKET_URL=API_GATEWAY_INVOKE_URL
 
 **Amplify Environment variables**
 
-Click on "Environment variables" to manage environment variables.
+1. Access the Amplify environment variable management interface.
 
-Click on the "Edit" button, and then "Add environment variable". Input the name and value for environment variable for API Gateway Invoke URL:
+2. Click the "Edit" button and then "Add environment variable."
 
-Name: `VITE_APP_WEBSOCKET_URL`
+3. Set the following environment variable for the API Gateway Invoke URL:
 
-Value: `API_GATEWAY_INVOKE_URL`
+Name: VITE_APP_WEBSOCKET_URL
+
+Value: API_GATEWAY_INVOKE_URL
 
 ## Future Work
 

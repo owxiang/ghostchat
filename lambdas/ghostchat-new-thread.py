@@ -21,7 +21,7 @@ def lambda_handler(event, context):
         body = json.loads(event['body'])
         content = body['data']['content']
         author = body['data']['author']
-        timestamp = datetime.now().isoformat()
+        timestamp = body['data']['timestamp']
         threadId = str(body['data']['threadId'])
         telegram_message_id = str(
             send_telegram_notification(threadId, author, content))
@@ -99,8 +99,6 @@ def send_telegram_notification(threadId, author, content):
 
     # message = f"New Whisper\n\n{content}\nClick [here]({thread_url}) to reply"
     message = f"Whisper from {author}\n\n{content}\nClick {thread_url} to echo."
-
-    send_text = f'https://api.telegram.org/{bot_token}/sendMessage?chat_id={chat_id}&parse_mode=Markdown&text={message}'
 
     response = requests.get(
         f"https://api.telegram.org/{bot_token}/sendMessage?chat_id={chat_id}&text="

@@ -2,12 +2,12 @@
 
 ## Overview
 
-[GhostChat](https://main..amplifyapp.com/) is a real-time chat application with whispers and ehocs. Built with React, WebSocket, and AWS Lambda, it provides a supernatural chatting experience!
+[GhostChat](https://main..amplifyapp.com/) is a live forum-like application with whispers(threads), echos(replies) and ghosts(authors).
 
 ## Technologies
 
 - AWS Lambda
-  - See codes [here](https://github.com/owxiang//tree/main/aws).
+  - See codes [here](https://github.com/owxiang/ghostchat/tree/main/lambdas).
 - AWS DynamoDB
 - AWS API Gateway with WebSocket
 - AWS Systems Manager
@@ -28,11 +28,11 @@ npm run dev
 
 ## Usage
 
-Enter your ghostly name and start a new thread or reply to existing ones.
+Enter your ghostly name and start a new whisper or echo to existing ones.
 
-Use the search bar to find old threads or replies.
+Use the search bar to find old whisper, echos or ghosts.
 
-## Configurations
+## Configurations for backend
 
 **Local Environment variables**
 
@@ -53,3 +53,6 @@ Name: `VITE_APP_WEBSOCKET_URL`
 Value: `API_GATEWAY_INVOKE_URL`
 
 ## Future Work
+
+- Slack integration for notification.
+  - Telegram is working with echos quoting whisper.

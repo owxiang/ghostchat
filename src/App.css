@@ -1,3 +1,9 @@
+.heading-home {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   width: 100%; /* Full width */
   margin: 0 auto;

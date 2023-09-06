@@ -16,6 +16,8 @@
 
 ## Cloud Architecture
 
+![ghostchat drawio](https://github.com/owxiang/ghostchat/assets/22820037/b29207a0-f18d-4b03-bbf2-6a0239d91c23)
+
 ## Getting Started
 
 To get GhostChat up and running locally, follow these steps:
@@ -53,8 +55,9 @@ Utilize the search bar to find previous whispers, echoes, or ghosts.
 
 Create a .env file at the root of the project and add your API Gateway Invoke URL:
 
+```
 VITE_APP_WEBSOCKET_URL=API_GATEWAY_INVOKE_URL
-
+```
 **Amplify Environment variables**
 
 1. Access the Amplify environment variable management interface.
@@ -63,9 +66,9 @@ VITE_APP_WEBSOCKET_URL=API_GATEWAY_INVOKE_URL
 
 3. Set the following environment variable for the API Gateway Invoke URL:
 
-Name: VITE_APP_WEBSOCKET_URL
+`Name`: `VITE_APP_WEBSOCKET_URL`
 
-Value: API_GATEWAY_INVOKE_URL
+`Value`: `API_GATEWAY_INVOKE_URL`
 
 ## Future Work
 

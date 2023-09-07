@@ -95,10 +95,11 @@ def send_telegram_notification(threadId, author, content):
     chat_id = ssm.get_parameter(
         Name='telagram-chatid-testbed')['Parameter']['Value']
 
-    thread_url = f"http://localhost:5173/thread/{threadId}"
+    base_url = "https://main.d3pzs3i3v2h1ic.amplifyapp.com/"
+    thread_url = f"{base_url}/thread/{threadId}"
 
-    # message = f"New Whisper\n\n{content}\nClick [here]({thread_url}) to reply"
-    message = f"Whisper from {author}\n\n{content}\nClick {thread_url} to echo."
+    message = f"Whisper from {author}\n\n{content}\nClick [here]({thread_url}) to echo"
+    # message = f"Whisper from {author}\n\n{content}\nClick {thread_url} to echo."
 
     response = requests.get(
         f"https://api.telegram.org/{bot_token}/sendMessage?chat_id={chat_id}&text="

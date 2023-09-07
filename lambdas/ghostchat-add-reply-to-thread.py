@@ -68,8 +68,10 @@ def lambda_handler(event, context):
 
         item = table.get_item(Key={'threadId': threadId}).get('Item')
         telegram_message_id = item.get('telegramMessageId')
-        thread_url = f"http://localhost:5173/thread/{threadId}"
-        reply_text = f"Echo from {author}\n\n{reply_content}\nClick {thread_url} to echo."
+        base_url = "https://main.d3pzs3i3v2h1ic.amplifyapp.com/"
+        thread_url = f"{base_url}/thread/{threadId}"
+
+        reply_text = f"Echo from {author}\n\n{reply_content}\nClick [here]({thread_url}) to echo."
         send_telegram_reply(telegram_message_id, reply_text)
 
         return {

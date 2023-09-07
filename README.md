@@ -10,7 +10,7 @@
 - Whistleblower Platform
 - Confessions or Secrets Sharing
 - Anonymous Support Group
-  
+
 ## Technologies
 
 - AWS Lambda: View the codes [here](https://github.com/owxiang/ghostchat/tree/main/lambdas).
@@ -81,4 +81,4 @@ VITE_APP_WEBSOCKET_URL=API_GATEWAY_INVOKE_URL
 ## Future Work
 
 - Slack integration for notification.
-  - Telegram is working with echoes quoting whispers.
+  - Telegram is working for new echoes quoting whispers.

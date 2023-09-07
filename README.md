@@ -82,3 +82,4 @@ VITE_APP_WEBSOCKET_URL=API_GATEWAY_INVOKE_URL
 
 - Slack integration for notification.
   - Telegram is working for new echoes quoting whispers.
+<img width="438" alt="Screenshot 2023-09-07 at 10 24 21 AM" src="https://github.com/owxiang/ghostchat/assets/22820037/c95a1e93-dfe0-42f5-aaa9-b0ef780f2cc7">

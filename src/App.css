@@ -9,27 +9,28 @@
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.post-container, .reply-container {
+.post-container,
+.reply-container {
   margin-bottom: 20px;
 }
 
-input{
+input {
   width: 100%;
   height: 40px;
   resize: none;
   margin-bottom: 5px;
-  border-radius: 4px; 
-  border: 1px solid #ccc; 
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 textarea {
   width: 100%;
-  height: 100px; 
+  height: 100px;
   resize: none;
-  border-radius: 4px; 
+  border-radius: 4px;
   border: 1px solid #ccc;
 }
 
@@ -70,7 +71,7 @@ button:hover {
 
 @media (max-width: 768px) {
   .container {
-    padding: 10px; 
+    padding: 10px;
   }
 
   textarea {

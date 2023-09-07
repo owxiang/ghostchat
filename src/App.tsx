@@ -227,10 +227,10 @@ const App: React.FC = () => {
               onClick={() => toggleThread(thread.threadId)}
               style={{ cursor: "pointer" }}
             >
-              {thread.author}: {thread.content}
+              {thread.content}
               <br />
               <span className="timestamp">
-                {new Date(thread.timestamp).toLocaleString()}
+                {thread.author} {new Date(thread.timestamp).toLocaleString()}
               </span>
             </div>
 
@@ -238,9 +238,10 @@ const App: React.FC = () => {
               <>
                 {thread.replies.map((reply) => (
                   <p key={reply.replyId} className="reply">
-                    {reply.author}: {reply.content}
+                    {reply.content}
                     <br />
                     <span className="timestamp">
+                      {reply.author}{" "}
                       {new Date(reply.timestamp).toLocaleString()}
                     </span>
                   </p>

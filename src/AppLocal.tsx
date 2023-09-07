@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import "./App.css";
 import "@fontsource/poppins";
 
-interface Reply {
-  replyId: number;
-  content: string;
-  author: string;
-  timestamp: Date;
-}
-
 interface Thread {
   threadId: number;
   content: string;
   author: string;
   replies: Reply[];
   isOpen: boolean;
+  timestamp: Date;
+}
+interface Reply {
+  replyId: number;
+  content: string;
+  author: string;
   timestamp: Date;
 }
 
@@ -44,6 +43,7 @@ const AppLocal: React.FC = () => {
 
   const handleReplySubmit = (threadId: number) => {
     const threadReply = currentReplies[threadId] || "";
+
     if (threadReply.trim()) {
       const newReply = {
         replyId: Date.now(),
@@ -51,6 +51,7 @@ const AppLocal: React.FC = () => {
         author: author || "Ghost",
         timestamp: new Date(),
       };
+
       setThreads((prevThreads) => {
         return prevThreads.map((thread) =>
           thread.threadId === threadId
@@ -131,12 +132,10 @@ const AppLocal: React.FC = () => {
               onClick={() => toggleThread(thread.threadId)}
               style={{ cursor: "pointer" }}
             >
-              {thread.author}: {thread.content}
+              {thread.content}
               <br />
               <span className="timestamp">
-                {thread.timestamp
-                  ? new Date(thread.timestamp).toLocaleString()
-                  : ""}
+                {thread.author} {new Date(thread.timestamp).toLocaleString()}
               </span>
             </div>
 
@@ -144,12 +143,11 @@ const AppLocal: React.FC = () => {
               <>
                 {thread.replies.map((reply) => (
                   <p key={reply.replyId} className="reply">
-                    {reply.author}: {reply.content}
+                    {reply.content}
                     <br />
                     <span className="timestamp">
-                      {reply.timestamp
-                        ? new Date(reply.timestamp).toLocaleString()
-                        : ""}
+                      {reply.author}{" "}
+                      {new Date(reply.timestamp).toLocaleString()}
                     </span>
                   </p>
                 ))}

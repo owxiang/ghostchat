@@ -2,7 +2,7 @@
 
 ## Overview
 
-[GhostChat](https://main..amplifyapp.com/) is a live discussion board that introduces a _supernatural_ concept with whispers (threads), echoes (replies), and ghosts (authors).
+[GhostChat](https://main.d3pzs3i3v2h1ic.amplifyapp.com/) is a live discussion board that introduces a _supernatural_ concept with whispers (threads), echoes (replies), and ghosts (authors).
 
 ## Potential use cases
 

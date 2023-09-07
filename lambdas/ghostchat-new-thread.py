@@ -97,9 +97,7 @@ def send_telegram_notification(threadId, author, content):
 
     base_url = "https://main.d3pzs3i3v2h1ic.amplifyapp.com/"
     thread_url = f"{base_url}/thread/{threadId}"
-
-    message = f"Whisper from {author}\n\n{content}\nClick [here]({thread_url}) to echo"
-    # message = f"Whisper from {author}\n\n{content}\nClick {thread_url} to echo."
+    message = f"[Whisper]({thread_url}) from {author}\n\n{content}"
 
     response = requests.get(
         f"https://api.telegram.org/{bot_token}/sendMessage?chat_id={chat_id}&text="

@@ -23,7 +23,7 @@ def lambda_handler(event, context):
         reply_content = body['data']['content']
         replyId = str(body['data']['replyId'])
         author = body['data']['author']
-        timestamp = datetime.now().isoformat()
+        timestamp = body['data']['timestamp']
 
         reply = {
             'replyId': replyId,
@@ -71,7 +71,7 @@ def lambda_handler(event, context):
         base_url = "https://main.d3pzs3i3v2h1ic.amplifyapp.com/"
         thread_url = f"{base_url}/thread/{threadId}"
 
-        reply_text = f"Echo from {author}\n\n{reply_content}\nClick [here]({thread_url}) to echo."
+        reply_text = f"[Echo]({thread_url}) from {author}\n\n{reply_content}"
         send_telegram_reply(telegram_message_id, reply_text)
 
         return {
@@ -102,7 +102,8 @@ def send_telegram_reply(telegram_message_id, reply_text):
     response = requests.post(base_url, data={
         "chat_id": chat_id,
         "text": reply_text,
-        "reply_to_message_id": telegram_message_id
+        "reply_to_message_id": telegram_message_id,
+        "parse_mode": "Markdown"
     })
 
     if response.status_code != 200:
